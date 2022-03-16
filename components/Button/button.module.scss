@@ -1,0 +1,40 @@
+.button{
+    padding: 15px 40px;
+    
+    transition: all .2s linear;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 45px;
+}
+
+.gradient_btn{
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+
+    color: #fff;
+    border: 1px solid #E11F26;
+
+    &:after{
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: -1;
+
+        background: linear-gradient(267.29deg, #E11F26 4.23%, #DD408B 104.93%), #C4C4C4;
+
+        transition: all .2s linear;
+    }
+
+    &:hover{
+        color: #E11F26;
+        &:after{
+            opacity: 0;
+        }
+    }
+}
