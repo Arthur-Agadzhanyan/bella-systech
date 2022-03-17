@@ -7,12 +7,14 @@ import Container from "@/components/Container"
 import Button from "@/components/Button"
 // IMAGES
 import LogoImg from '@/public/navigation/logo.svg'
-import SearchImg from '@/public/navigation/search.svg'
 import FirstPixelsImg from '@/public/navigation/menu/first_pixels.svg'
 import SecondPixelsImg from '@/public/navigation/menu/second_pixels.svg'
 import FacebookIcon from '@/public/navigation/menu/icon_facebook.svg'
 import InstagramIcon from '@/public/navigation/menu/icon_instagram.svg'
 import YoutubeIcon from '@/public/navigation/menu/icon_youtube.svg'
+
+import {SearchIcon} from '@/public/navigation/search_icon'
+import {ContactIcon} from '@/public/navigation/contact_icon'
 //STYLES
 import s from "./navbar.module.scss"
 
@@ -27,9 +29,7 @@ function NavBar(props: Props) {
 
     const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
         e.currentTarget.classList.toggle(`${s.contacts__burger_active}`);
-
         menuRef.current && menuRef.current.classList.toggle(`${s.menu_active}`);
-
     }
 
     const navLinks = [
@@ -47,37 +47,44 @@ function NavBar(props: Props) {
     ]
 
     return (
-        <Container>
-            <div className={s.navbar}>
-                <div className={s.navbar__info}>
-                    <Image
-                        className={s.info__logo}
-                        src={LogoImg}
-                        width={280}
-                    />
+        <>
+            <div className={s.navbar_container}>
+                <p className={s.navbar_header}>Официальный дистрибьютор LUTRONIC, CLASSYS, HISTOLAB, Bnv Diolab, Skinwell, YCELLBIO в России </p>
 
-                    <div className={s.info__text}>Лазерное и косметологическое оборудование, профессиональная косметика, PRP-пробирки</div>
-                </div>
+                <Container>
+                    <div className={s.navbar}>
+                        <div className={s.navbar__info}>
+                            <img
+                                className={s.info__logo}
+                                src={LogoImg.src}
+                            />
 
-                <div className={s.navbar__contacts}>
-                    <Image
-                        className={s.info__logo}
-                        src={SearchImg}
-                        width={30}
-                        height={30}
-                    />
+                            <div className={s.info__text}>Лазерное и косметологическое оборудование, профессиональная косметика, PRP-пробирки</div>
+                        </div>
 
-                    <span className={s.contacts__phone}>8 (800) 485 28 42</span>
+                        <div className={s.navbar__contacts}>
+                            <button className={`${s.contacts__icon_btn} ${s.contacts__icon_btn_mb} ${s.contacts__icon_btn_connect}`}>
+                                <ContactIcon className={`${s.contacts__icon}`}/>
+                            </button>
 
-                    <Button className={s.contacts__button} variant={"gradient"}>Получить консультацию</Button>
+                            <button className={s.contacts__icon_btn}>
+                                <SearchIcon className={`${s.contacts__icon}`}/>
+                            </button>
 
-                    <button onClick={clickHandler} className={s.contacts__burger}>
-                        <span className={`${s.burger__line} ${s.burger__line_first}`}></span>
-                        <span className={`${s.burger__line} ${s.burger__line_second}`}></span>
-                    </button>
-                </div>
+                            <span className={s.contacts__phone}>8 (800) 485 28 42</span>
+
+                            <Button className={s.contacts__button} variant={"gradient"}>Получить консультацию</Button>
+
+                            <button onClick={clickHandler} className={s.contacts__burger}>
+                                <span className={`${s.burger__line} ${s.burger__line_first}`}></span>
+                                <span className={`${s.burger__line} ${s.burger__line_second}`}></span>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </Container>
             </div>
-
             <div ref={menuRef} className={s.nav_menu}>
                 <Container className={s.nav_menu__container}>
                     <div className={s.nav_menu__content}>
@@ -116,7 +123,8 @@ function NavBar(props: Props) {
                     </div>
                 </Container>
             </div>
-        </Container>
+        </>
+
     )
 }
 

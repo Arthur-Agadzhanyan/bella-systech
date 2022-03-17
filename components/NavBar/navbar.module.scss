@@ -1,10 +1,29 @@
 @import '@/styles/_mixins.scss';
 
-.navbar{
+.navbar_container{
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: #fff;
+}
 
+.navbar_header{
+  background: #E7E7E7;
+  text-align: center;
+  @include text(#272727,14px,300);
+
+  @media screen and (max-width: 650px) {
+    font-weight: 400;
+    padding: 0px 24px;
+    background: #C4C4C4;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 10px;
+    padding: 0px 16px;
+  }
+}
+
+.navbar{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,11 +37,35 @@
     display: flex;
     align-items: center;
 
+    .info__logo{
+      width: 280px;
+      @media screen and (max-width: 650px){
+        width: 210px !important;
+      }
+      @media screen and (max-width: 420px){
+        width: 160px !important;
+      }
+      @media screen and (max-width: 360px){
+        width: 140px !important;
+      }
+    }
+
     .info__text{
       max-width: 430px;
       margin-left: 40px;
 
       @include text(#272727,16px,700,19px);
+
+      @media screen and (max-width: 1550px) {
+        margin-left: 30px;
+      }
+      @media screen and (max-width: 1440px) {
+        max-width: 340px;
+        @include text(#272727,14px,700,16px);
+      }
+      @media screen and (max-width: 1250px) {
+        display: none;
+      }
     }
   }
 
@@ -30,13 +73,94 @@
     display: flex;
     align-items: center;
 
+    .contacts__icon_btn{
+      padding: 0;
+      background: transparent;
+      border: none;
+      outline: none;
+      .contacts__icon{
+        cursor: pointer;
+
+        path{
+          transition: all .2s linear;
+        }
+
+        &:hover{
+          path{
+            stroke: #DD408B;
+
+          }
+        }
+
+        @media screen and (max-width: 650px) {
+          height: 24px;
+        }
+      }
+
+      &_mb{
+        display: none;
+
+        @media screen and (max-width: 650px) {
+          display: block;
+        }
+      }
+
+      &_connect{
+        &:hover{
+          path{
+            stroke: transparent !important;
+            fill: #DD408B;
+          }
+        }
+
+        @media screen and (max-width: 650px) {
+          height: 33px;
+        }
+      }
+
+      @media screen and (max-width: 650px) {
+        margin-right: 26px;
+        margin-bottom: -2px;
+      }
+
+      @media screen and (max-width: 400px) {
+        margin-right: 20px;
+        margin-bottom: -2px;
+      }
+    }
+
     .contacts__phone{
       margin: 0px 50px;
       @include text(#272727,18px,300,22px);
+
+      @media screen and (max-width: 1550px) {
+        margin: 0px 30px;
+      }
+
+      @media screen and (max-width: 1330px) {
+        margin: 0px 20px;
+      }
+      @media screen and (max-width: 950px) {
+        margin: 0px 15px;
+      }
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
     }
 
     .contacts__button{
       margin-right: 50px;
+      @media screen and (max-width: 1550px) {
+        margin-right: 30px;
+      }
+      
+      @media screen and (max-width: 1440px) {
+        padding: 15px 30px;
+        font-size: 15px;
+      }
+      @media screen and (max-width: 950px) {
+        display: none;
+      }
     }
 
     .contacts__burger{
@@ -66,38 +190,54 @@
         &_second{
           bottom:0;
         }
+        
+
       }
 
       &_active{
         .burger__line_first{
           transform: translateY(5px) rotate(-45deg);
+          @media screen and (max-width: 650px) {
+            transform: translateY(4px) rotate(-45deg);
+          }
         }
 
         .burger__line_second{
           transform: translateY(-10px) rotate(45deg);
+
+          @media screen and (max-width: 650px) {
+            transform: translateY(-7px) rotate(45deg);
+          }
         }
       }
 
-      @media screen and (max-width: 700px) {
-        width: 24px;
-        height: 17px;
+      @media screen and (max-width: 650px) {
+        width: 34px;
+        height: 13px;
+      }
+
+      @media screen and (max-width: 420px){
+        width: 29px;
+        margin-right: 0;
       }
     }
+  }
 
-    @media screen and (max-width: 700px) {
-      padding: 10px 0px;
-    }
+  @media screen and (max-width: 650px){
+    border-bottom: none;
   }
 }
 
 .nav_menu{
   position: fixed;
-  top: -100%;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 900;
   padding-bottom: 80px;
+  background: #fff;
 
+  transform: translateY(-100%);
   transition: all .4s linear;
 
   &__container{
@@ -184,6 +324,6 @@
 }
 
 .menu_active{
-  top: 98px;
+  transform: translateY(98px);
   height: 92%;
 }

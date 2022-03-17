@@ -42,7 +42,7 @@ function Button({ children, className = '', mainColor = '#E89F71', secondaryColo
             onPointerOut={() => setHover(false)}
 
             className={`${s.button} ${className} ${variant === 'gradient' ? s.gradient_btn : ''}`}
-        >{children}</button>
+        ><span>{children}</span></button>
     )
 }
 
