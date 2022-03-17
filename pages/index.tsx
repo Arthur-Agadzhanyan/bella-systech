@@ -1,11 +1,13 @@
 import Button from '@/components/Button'
 import type { NextPage } from 'next'
+import IntroSection from "@/components/MainPage/IntroSection";
 
-const Home: NextPage = () => {
+const Main: NextPage = () => {
   return (
     <>
+      <IntroSection/>
     </>
   )
 }
 
-export default Home
+export default Main
