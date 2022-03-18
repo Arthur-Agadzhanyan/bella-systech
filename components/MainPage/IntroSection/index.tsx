@@ -1,24 +1,30 @@
 import React, {createRef, useState} from 'react';
-import s from "./intro-section.module.scss";
-import Container from "@/components/Container";
-
+//SWIPER
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, {Pagination, Controller, Navigation} from 'swiper'
-
+//NEXT COMPONENTS
 import Link from "next/link"
-
-//IMAGES
-import girlImg from '@/public/main_page/intro/1.png'
-import LaserPicoplusImage from '@/public/main_page/intro/slider/laser_picoplus.png'
-import lutronicLogo from '@/public/main_page/intro/slider/lutronic_logo.svg'
-import SliderRightArrow from '@/public/main_page/intro/arrow-right.svg'
-import SliderLeftArrow from '@/public/main_page/intro/arrow-left.svg'
-
+//CUSTOM COMPONENTS
+import Button from "@/components/Button";
+import Container from "@/components/Container";
+//SWIPER STYLES
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Button from "@/components/Button";
+//CUSTOM STYLES
+import s from "./intro-section.module.scss";
+//IMAGES
+import TopPixels from "@/public/main_page/intro/pixels_top.png"
+import BottomPixels from "@/public/main_page/intro/pixels_bottom.png"
+
+import LaserPicoplusImage from '@/public/main_page/intro/slider/laser_picoplus.png'
+import lutronicLogo from '@/public/main_page/intro/slider/lutronic_logo.svg'
+
+import SliderRightArrow from '@/public/main_page/intro/arrow-right.svg'
+import SliderLeftArrow from '@/public/main_page/intro/arrow-left.svg'
+
+import girlImg from '@/public/main_page/intro/1.png'
 
 SwiperCore.use([Pagination,Controller,Navigation])
 
@@ -80,9 +86,13 @@ function Intro() {
 
     return (
         <section className={s.intro}>
+            <img className={s.top_pixels} src={TopPixels.src} alt=""/>
+            <img className={s.bottom_pixels} src={BottomPixels.src} alt=""/>
             <Container>
                 <div className={s.intro__content}>
                     <div className={s.content__info}>
+
+
                         <h3 className={s.intro__innovations}>Инновационные решения <br/> для эстетической медицины</h3>
 
                         <div className={s.sliders}>

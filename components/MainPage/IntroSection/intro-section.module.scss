@@ -146,6 +146,7 @@
         }
       }
 
+
     }
 
     .content__girl {
@@ -160,6 +161,18 @@
         display: block;
       }
     }
+  }
+
+  .top_pixels{
+    position: absolute;
+    top: 58px;
+    left: 42.5%;
+  }
+
+  .bottom_pixels{
+    position: absolute;
+    bottom: 40px;
+    right: 9.5vw;
   }
 }
 
