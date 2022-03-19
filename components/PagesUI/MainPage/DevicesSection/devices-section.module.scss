@@ -1,0 +1,58 @@
+@import  '@/styles/_mixins.scss';
+
+.devices{
+  display: flex;
+  justify-content: space-between;
+  &__item{
+    display: flex;
+    justify-content: space-between;
+
+    flex: 0 1 50%;
+    background: #CDCDCD;
+
+    padding: 114px 10px 0px 80px;
+
+    &_classys{
+      background: #E2E2E2;
+
+      .item_classys__title{
+        margin: 40px 0px;
+      }
+    }
+
+    .item__info{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      flex: 0 1 56%;
+      padding-bottom: 77px;
+
+      .info__logo{
+
+      }
+
+      .info__title{
+        margin: 28px 0px;
+        @include text(#272727,32px,300);
+        span{
+          display: block;
+        }
+      }
+
+      .info__text{
+        font-family: 'Garamond';
+        @include text(#272727,24px,400,27px);
+        padding-bottom: 48px;
+      }
+
+      .info__btn{
+        display: block;
+        margin-top: auto;
+        button{
+          padding: 21px 56px;
+        }
+      }
+    }
+  }
+}

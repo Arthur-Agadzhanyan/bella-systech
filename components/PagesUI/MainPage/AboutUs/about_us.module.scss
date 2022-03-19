@@ -1,0 +1,26 @@
+@import '@/styles/_mixins.scss';
+
+.about_us{
+  padding-top: 120px;
+  padding-bottom: 124px;
+
+  &__content{
+
+    .content__list{
+      margin-top: 48px;
+      display: flex;
+      justify-content: space-between;
+      .list__item{
+        flex: 0 1 32%;
+        background: #f1f1f1;
+        .item__img{
+          width: 100% !important;
+        }
+        .item__text{
+          @include text(#272727,32px,300);
+          padding: 56px 67px 57px 56px;
+        }
+      }
+    }
+  }
+}
