@@ -21,7 +21,7 @@ const outlinedButtonStyle = (hover: boolean, mainColor: string, secondaryColor: 
     border: `1px solid ${mainColor}`
 })
 
-function Button({ children, className = '', mainColor = '#E89F71', secondaryColor = '#fff', variant = 'contained' }: Props) {
+function Button({ children, className = '', mainColor = '#fff', secondaryColor = '#000', variant = 'contained' }: Props) {
     const [hover, setHover] = useState(false);
 
     const buttonVariant = (variant: 'contained' | "outlined" | 'gradient') => {

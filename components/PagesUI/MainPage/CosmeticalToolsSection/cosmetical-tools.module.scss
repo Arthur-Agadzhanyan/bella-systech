@@ -1,0 +1,112 @@
+@import '@/styles/_mixins.scss';
+
+.cosmetical_tools {
+  position: relative;
+
+  overflow: hidden;
+  padding-top: 24px;
+  background: linear-gradient(267.29deg, #E11F26 4.23%, #DD408B 104.93%), #BDBDBD;
+
+  .tools__pixels{
+    mix-blend-mode: multiply;
+  }
+
+  .left_top_pixels{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .left_bottom_pixels{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .right_pixels{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
+
+  &__content{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 50px;
+
+    .content__vials{
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
+      margin-left: -50px;
+      margin-right: 50px;
+      .vials__red{
+        position: relative;
+        transform: translateX(25%);
+        z-index: 1;
+      }
+      .vials__green{
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    .content__info{
+      padding-bottom: 90px;
+      margin-left: 0px;
+      text-align: center;
+      min-width: 512px;
+
+      flex: 0 1 50%;
+      .info__title{
+        margin-bottom: auto;
+        @include text(#fff,44px,300,100%)
+      }
+
+      .info__subtitle{
+        margin-top: 14px;
+        margin-bottom: 73px;
+        font-family: Garamond;
+        @include text(#fff,24px,400,27px);
+      }
+
+      .info__btn{
+        margin-top: auto;
+        padding: 21px 56px;
+        border: none !important;
+      }
+    }
+
+    .content__creams{
+      display: flex;
+      align-items: flex-end;
+      margin-left: -40px;
+
+      .cream__item{
+
+      }
+
+      .creams__yellow{
+        position: relative;
+
+        z-index: 1;
+      }
+      .creams__blue{
+        position: relative;
+        transform: translateX(-56%);
+        z-index: 2;
+      }
+      .creams__violet{
+        position: relative;
+        transform: translateX(-96%);
+        z-index: 3;
+      }
+    }
+  }
+}
