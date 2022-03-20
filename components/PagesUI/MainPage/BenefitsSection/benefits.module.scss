@@ -1,0 +1,45 @@
+@import '@/styles/_mixins.scss';
+
+.benefits{
+  padding: 126px 0px;
+  padding-left: 20px;
+
+  .benefits__container{
+
+  }
+
+  &__content{
+    margin: 0 auto;
+    .content__list{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      margin-top: 72px;
+
+      .list__item{
+        flex: 0 1 24%;
+        display: flex;
+        align-items: flex-start;
+
+        .item__image{
+          max-height: 70px;
+          margin-right: 17px;
+        }
+
+        .item__info{
+
+          .info__title{
+            @include text(#272727,32px,300);
+          }
+
+          .info__text{
+            margin-top: 20px;
+            margin-left: 10px;
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}

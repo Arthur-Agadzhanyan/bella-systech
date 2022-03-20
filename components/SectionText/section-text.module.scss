@@ -1,0 +1,6 @@
+@import '@/styles/_mixins.scss';
+
+.section_text{
+  font-family: Garamond;
+  @include text(#272727,20px,400,22px);
+}
