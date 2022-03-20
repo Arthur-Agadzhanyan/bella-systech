@@ -3,7 +3,9 @@
 .devices{
   display: flex;
   justify-content: space-between;
+
   &__item{
+    position: relative;
     display: flex;
     justify-content: space-between;
 
@@ -54,5 +56,29 @@
         }
       }
     }
+
+    .item__images{
+      flex: 0 1 44%;
+      display: flex;
+      align-items: flex-end;
+      padding-right: 15px;
+      img{
+        mix-blend-mode: multiply;
+        margin-bottom: 24px;
+      }
+      .images__bottom{
+        margin-bottom: 0;
+      }
+    }
+
+    .pixels_block{
+      position: absolute;
+      top: 0;
+      right: 0;
+      img{
+        mix-blend-mode: multiply;
+      }
+    }
+
   }
 }
