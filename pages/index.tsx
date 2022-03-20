@@ -5,6 +5,7 @@ import DevicesSection from "@/components/PagesUI/MainPage/DevicesSection";
 import AboutUsSection from "@/components/PagesUI/MainPage/AboutUsSection";
 import CosmeticalToolsSection from "@/components/PagesUI/MainPage/CosmeticalToolsSection";
 import BenefitsSection from "@/components/PagesUI/MainPage/BenefitsSection";
+import ManufacturersSection from "@/components/PagesUI/MainPage/ManufacturersSection";
 
 const Main: NextPage = () => {
     return (
@@ -14,6 +15,7 @@ const Main: NextPage = () => {
             <AboutUsSection/>
             <CosmeticalToolsSection/>
             <BenefitsSection/>
+            <ManufacturersSection/>
         </>
     )
 }

@@ -1,13 +1,15 @@
 import React from 'react';
-import s from './benefits.module.scss'
+//CUSTOM COMPONENTS
 import Container from "@/components/Container";
 import SectionTitle from "@/components/SectionTitle";
-
+import SectionText from "@/components/SectionText";
+//IMAGES
 import serviceIcon from '@/public/icons/teh_service.svg'
 import guaranteeIcon from '@/public/icons/guarantee.svg'
 import educationIcon from '@/public/icons/education.svg'
 import supportIcon from '@/public/icons/support.svg'
-import SectionText from "@/components/SectionText";
+//CUSTOM STYLES
+import s from './benefits.module.scss'
 
 interface Benefit {
     img: string,

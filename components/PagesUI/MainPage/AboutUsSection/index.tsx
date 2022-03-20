@@ -1,13 +1,15 @@
 import React from 'react';
-import s from './about_us.module.scss'
+//NEXT COMPONENTS
+import Image from 'next/image'
+//CUSTOM COMPONENTS
 import Container from "@/components/Container";
 import SectionTitle from "@/components/SectionTitle";
-
-import Image from 'next/image'
-
+//IMAGES
 import pixelsFirst from '@/public/main_page/about_us/pixels_1.svg'
 import pixelsSecond from '@/public/main_page/about_us/pixels_2.svg'
 import pixelsThird from '@/public/main_page/about_us/pixels_3.svg'
+//STYLES
+import s from './about_us.module.scss'
 
 function AboutUsSection() {
 

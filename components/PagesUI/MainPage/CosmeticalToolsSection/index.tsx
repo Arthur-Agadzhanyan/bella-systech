@@ -1,10 +1,10 @@
 import React from 'react';
-import s from './cosmetical-tools.module.scss'
-import Container from "@/components/Container";
-
+//NEXT COMPONENTS
 import Image from 'next/image'
 import Link from 'next/link'
-
+//CUSTOM COMPONENTS
+import Container from "@/components/Container";
+//IMAGES
 import leftTopPixels from '@/public/main_page/cosmetical_tools/pixels/left_top.png'
 import leftBottomPixels from '@/public/main_page/cosmetical_tools/pixels/left_bot.png'
 import rightPixels from '@/public/main_page/cosmetical_tools/pixels/right.png'
@@ -17,6 +17,8 @@ import blueCream from '@/public/main_page/cosmetical_tools/cream_second.png'
 import violetCream from '@/public/main_page/cosmetical_tools/cream_third.png'
 
 import Button from "@/components/Button";
+// CUSTOM STYLES
+import s from './cosmetical-tools.module.scss'
 
 function CosmeticalTools() {
     return (

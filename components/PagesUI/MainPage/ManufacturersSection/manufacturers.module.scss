@@ -1,0 +1,87 @@
+@import '@/styles/_mixins.scss';
+
+.manufacturers{
+  background: #F1F1F1;
+  padding: 124px 0px;
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 48px;
+
+    .list__item{
+      flex: 0 1 32%;
+      margin-bottom: 46px;
+
+      display: flex;
+      flex-direction: column;
+
+      .item__top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #D7D7D7;
+        min-height: 187px;
+
+        .top__image{
+          transition: all .4s linear;
+          filter: grayscale(100%);
+        }
+      }
+
+      .item__line{
+        height: 1px;
+        border: none;
+        background: #fff;
+        margin: 21px 0px;
+        transition: all .4s linear;
+      }
+
+      .item__title{
+        @include text(#272727,32px,300);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .item__text{
+        margin-bottom: 23px;
+      }
+
+      .item__link{
+        display: block;
+        margin-top: auto;
+        font-family: Garamond;
+        letter-spacing: 1px;
+        transition: all .4s linear;
+
+        @include text(#DD408B,24px,400);
+      }
+
+      &:hover{
+        .item__top{
+          .top__image{
+            filter: grayscale(0%);
+          }
+        }
+
+        .item__line{
+          background: #DD408B;
+        }
+
+        .item__link{
+          color: #73001C;
+        }
+      }
+    }
+  }
+
+  .manufacturers__btn{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+
+    padding: 21px 48px;
+  }
+}
