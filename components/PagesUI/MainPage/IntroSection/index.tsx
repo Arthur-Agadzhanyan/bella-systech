@@ -21,8 +21,8 @@ import BottomPixels from "@/public/main_page/intro/pixels_bottom.png"
 import LaserPicoplusImage from '@/public/main_page/intro/slider/laser_picoplus.png'
 import lutronicLogo from '@/public/main_page/intro/slider/lutronic_logo.svg'
 
-import SliderRightArrow from '@/public/main_page/intro/arrow-right.svg'
-import SliderLeftArrow from '@/public/main_page/intro/arrow-left.svg'
+import SliderRightArrow from '@/public/icons/arrow-right.svg'
+import SliderLeftArrow from '@/public/icons/arrow-left.svg'
 
 import girlImg from '@/public/main_page/intro/1.png'
 
@@ -91,7 +91,6 @@ function Intro() {
             <Container>
                 <div className={s.intro__content}>
                     <div className={s.content__info}>
-
 
                         <h3 className={s.intro__innovations}>Инновационные решения <br/> для эстетической медицины</h3>
 

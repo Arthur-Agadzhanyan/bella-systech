@@ -63,6 +63,8 @@
       align-items: flex-end;
       padding-right: 15px;
       img{
+        pointer-events: none !important;
+        user-select: none !important;
         mix-blend-mode: multiply;
         margin-bottom: 24px;
       }

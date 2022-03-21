@@ -9,6 +9,8 @@
 
   .tools__pixels{
     mix-blend-mode: multiply;
+    pointer-events: none;
+    user-select: none;
   }
 
   .left_top_pixels{
@@ -46,6 +48,8 @@
       flex-grow: 1;
       margin-left: -50px;
       margin-right: 50px;
+      pointer-events: none;
+      user-select: none;
       .vials__red{
         position: relative;
         transform: translateX(25%);
@@ -89,12 +93,14 @@
       margin-left: -40px;
 
       .cream__item{
-
+        pointer-events: none !important;
+        user-select: none !important;
       }
 
       .creams__yellow{
         position: relative;
-
+        pointer-events: none !important;
+        user-select: none !important;
         z-index: 1;
       }
       .creams__blue{

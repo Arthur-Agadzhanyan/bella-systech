@@ -1,0 +1,177 @@
+@import '@/styles/_mixins.scss';
+
+.enrollment{
+  padding: 150px 0px 190px 0px;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(267.29deg, #E11F26 4.23%, #DD408B 104.93%), #DD408B;
+
+  &__content{
+    max-width: 870px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+
+    .content__form{
+
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .form__div {
+        flex: 0 1 48%;
+        position: relative;
+        color: #fff;
+        margin-bottom: 24px;
+
+        .form__input {
+          width: 100%;
+          background: transparent;
+          padding: 21px 24px;
+          position: relative;
+          z-index: 2;
+          color: #fff;
+
+          border: 1px solid #fff;
+          outline: none;
+          border-radius: 8px;
+
+          @include text(#fff, 18px, 400);
+        }
+
+        .form__input:focus + .form__label, .form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+          top: 10px;
+          font-size: 12px;
+          z-index: 10;
+        }
+
+        .form__input:focus, .form__input:not(:placeholder-shown) {
+          padding: 29px 24px 13px 24px;
+        }
+
+        .form__label {
+          transition: all .2s linear;
+          position: absolute;
+          left: 24px;
+          top: 21px;
+          z-index: 1;
+          @include text(#fff, 18px, 400);
+        }
+      }
+
+      .form__check_item{
+        flex: 0 1 48.5%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+        margin-left: auto;
+        text-align: left;
+
+        .item__check{
+          display: flex;
+          align-items: center;
+
+          cursor: pointer;
+
+          .check__input{
+            display: none;
+          }
+
+          .check__custom{
+            position: relative;
+
+            display: block;
+            min-width: 22px;
+            min-height: 22px;
+            border-radius: 4px;
+            background: transparent;
+            border: 1px solid #fff;
+            transition: .1s linear;
+
+            &:before{
+              opacity: 0;
+
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+
+              width: 15px;
+              height: 11px;
+              background: url("../../../public/icons/checked.svg") no-repeat center;
+
+              transition: .1s linear;
+            }
+          }
+
+          .check__input:checked + .check__custom{
+            background: white;
+          }
+
+          .check__input:checked + .check__custom:before{
+            opacity: 1;
+          }
+
+          .check__text{
+            margin-left: 8px;
+            @include text(#fff, 14px, 400);
+            transition: .1s linear;
+          }
+        }
+      }
+
+      .form__btn{
+        flex: 0 1 48%;
+        margin-bottom: 24px;
+
+        &:hover{
+          border: 1px solid #000 !important;
+        }
+      }
+    }
+
+
+    .content__title{
+      color: #fff;
+    }
+
+    .content__text{
+      font-family: Garamond;
+      @include text(#fff,24px,400);
+      margin-top: 20px;
+      letter-spacing: 0.8px;
+      text-align: center;
+    }
+
+    .content__form_block{
+      margin-top: 40px;
+    }
+  }
+
+  .enrollment__pixels{
+    display: flex;
+    position: absolute;
+    img{
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .top__pixels{
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .bottom__pixels{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: flex-end;
+  }
+}

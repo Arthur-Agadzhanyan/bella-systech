@@ -6,6 +6,8 @@ import AboutUsSection from "@/components/PagesUI/MainPage/AboutUsSection";
 import CosmeticalToolsSection from "@/components/PagesUI/MainPage/CosmeticalToolsSection";
 import BenefitsSection from "@/components/PagesUI/MainPage/BenefitsSection";
 import ManufacturersSection from "@/components/PagesUI/MainPage/ManufacturersSection";
+import NewsSection from "@/components/PagesUI/MainPage/NewsSection";
+import CourseEnrollment from "@/components/PagesUI/CourseEnrollmentSection";
 
 const Main: NextPage = () => {
     return (
@@ -16,6 +18,8 @@ const Main: NextPage = () => {
             <CosmeticalToolsSection/>
             <BenefitsSection/>
             <ManufacturersSection/>
+            <NewsSection/>
+            <CourseEnrollment/>
         </>
     )
 }
